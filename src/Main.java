@@ -2,31 +2,39 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //scanner declared
-        Scanner scanner = new Scanner(System.in);
-        //scanner reads user text input
-        System.out.println("Input Text here: ");
-        String message = scanner.nextLine();
-        System.out.println("Your string was: " + message);
-        //scanner reads user number input
-        System.out.println("Write a number: ");
-        int value = Integer.valueOf(scanner.nextLine());
-        System.out.println("Your integer is: " + value);
-        //scanner reads user decimal input
-        System.out.println("Write a decimal value: ");
-        double decimalValue = Double.valueOf(scanner.nextLine());
-        System.out.println("Your decimal is: " + decimalValue);
-        //scanner reads user boolean input
-        System.out.println("Is this true or false?: ");
-        boolean booleanValue = Boolean.valueOf(scanner.nextLine());
-        System.out.println("This is " + booleanValue);
+        /* Guess the random number game
+        Code will generate a random number
+        Then user will guess within the random range
+        Then code will output if the number is too high too low or correct
+        Then user will win the game after correctly guessing.
 
+        //Creating a Random number
+        Random rand = new Random();
+        int randNum = rand.nextInt(100) + 1;
+        */
+
+        //Scanner for user inputs
+        Scanner scanner = new Scanner(System.in);
+        //declaring guess as a variable
+        int userGuess = 0;
+
+        //Creating a Random number
+        int randomNum = (int) (Math.random() * 100 + 1);
+        System.out.println(randomNum);
+
+        //Loop to allow multiple guesses, Will loop until user inputs correct value
+        while (userGuess != randomNum) {
+            System.out.println("Guess a Number: ");
+            //User inputs a guess
+            userGuess = scanner.nextInt();
+            //Reads user input creates the win condition
+            if (userGuess == randomNum) {
+                System.out.println("You Win!");
+            } else if (randomNum > userGuess) {
+                System.out.println("Too low! Guess higher.");
+            } else {
+                System.out.println("Too high! Guess lower.");
+            }
+        }
     }
-    /*
-     Variable Examples;
-         String text = "contains text";
-         int wholeNumber = 123;
-         double floatingPoint = 3.141592653;
-         boolean trueOrFalse = true;
-    */
 }
