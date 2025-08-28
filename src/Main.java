@@ -19,8 +19,11 @@ public class Main {
         do {
             //Creating a Random number
             int randomNum = (int) (Math.random() * 100 + 1);
-            System.out.println(randomNum);
             System.out.println("I am thinking of a number!");
+
+            //Debug tool
+            //System.out.println(randomNum);
+
             //resetting user guess as auto-win was possible on rare chance to get same number twice
             userGuess = 0;
 
