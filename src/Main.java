@@ -1,8 +1,7 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         /* Guess the random number game
         Code will generate a random number
         Then user will guess within the random range
@@ -13,8 +12,8 @@ public class Main {
         //Scanner for user inputs
         Scanner scanner = new Scanner(System.in);
         //declaring the players guess as a variable
-        int userGuess = 0;
-        boolean stopPlaying = false;
+        int userGuess;
+        boolean stopPlaying;
         //do loop allows for the player to replay. keepPlaying variable is false. Once set to true it will carry on do loop.
         do {
             //Creating a Random number
